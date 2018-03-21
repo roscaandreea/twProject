@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -17,24 +16,62 @@
         <li > <a href="about.html"> About </a> </li>
         <li ><a href="statistics.html">Statistics</a></li>
         <li ><a href="index.html">Home</a></li>
-        <li> <a href="index.html"> <img src="images/logo.png" alt="HTML5 Icon"> </a></li>
+        <h1> <a href="index.html"> <img src="images/logo.png"> </a></h1>
       </ul>
     </nav>
 </header>
-<!-- codul pentru prima sectiune -->
-<section id="first-section">
-     <h2>Get in touch with us</h2> 
-        <p>Hosting a good party is almost all about preparation, so if you get everything ready ahead of time you can be assured that you and your guests will have a good time all night. Our team are here to help!
-        <br/> <br/> 
-        Feel free to contact us by email on masked_ball@gmail.com or telephone on 0764 856 321.</p>
+
+<body>
+
+<section id="firstSectionInvitation">
+    <div id="formDiv">
+        <form>
+            <h1>Get in touch with us</h1>
+            <p>Hosting a good party is almost all about preparation, so if you get everything ready ahead of time you can be assured that you and your guests will have a good time all night. Our team are here to help!
+            <br/> <br/> 
+            Feel free to contact us by email on masked_ball@gmail.com or telephone on 0764 856 321.</p>
+
+            
+
+            <p>Or leave us a message right here:</p>
+        </form>
+    </div>
 </section>
 
-<!-- codul pentru sectiunea 2 -->
-<section id="second-section">
-    <div>
-    <h1>Have you found and liked us on Facebook yet? What are you waiting for? <a href="https://ro-ro.facebook.com/" target="_blank">We are right here!</a></h1>
-    </div>
-</section>   
-</body>
+<div id="firstSectionInvitation">
+    <form id="formDiv">
+  
+      <label for="fname">First Name</label>
+      <input type="text" id="fname" name="firstname" placeholder="Your name..">
+  
+      <label for="lname">Last Name</label>
+      <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+  
+      <label for="country">Country</label>
+      <select id="country" name="country">
+        <option value="australia">Australia</option>
+        <option value="canada">Canada</option>
+        <option value="usa">USA</option>
+      </select>
+  
+      <label for="subject">Subject</label>
+      <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+  
+      <input type="submit" value="Submit">
+  
+    </form>
 
+    <h2 id="likeUsOnFaceBook">Have you found and liked us on Facebook yet? What are you waiting for? <a href="https://ro-ro.facebook.com/" target="_blank">We are right here!</a></h2>
+
+  </div>
+
+  </body>
+
+<footer id="footer">
+    <a href="https://github.com/roscaandreea/twProject">
+        <img id="footer-icon2" src="images/github-icon.png" >
+    </a>
+    <p class="copyright"> ©Copyright Proiectul29 <br><a href="license.html">License terms</a>
+    </p>
+</footer>
 </html>

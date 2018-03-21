@@ -447,6 +447,48 @@ li a:hover:not(.active){
     margin:800px;
 }
 
+/* Feedback and AboutUs*/
+
+#imgAboutUs {
+    display: block;
+    margin: 0 auto;
+    border-radius: 50%;
+}
+
+#About{
+  margin-top: 5%;
+}
+
+#numeCoEchipier{
+    color: black;
+    margin-left: 2%;
+}
+
+#CoEchipier{
+    text-align: center;
+    color: black;
+  }
+
+#descriereCoEchipier{
+    margin-left: 20%;
+  margin-right: 20%;
+}
+
+#firstSectionFeedBack{
+    padding-top: 5%;
+    padding-left: 12%;
+    padding-bottom: 5%;
+    width: 75%;
+}
+
+#bodyCtUs{
+    display: inline-block;
+}
+
+#likeUsOnFaceBook{
+    color: #ffaa99;
+}
+
 /* styl pentru formulatul de creare a invitaiilor si a eventurilor*/
 #firstSectionCreateEvent{
     padding-top: 5%;
@@ -589,17 +631,8 @@ input {
 }
 
 #tableManageEvents {
-    font: 16px/1.4 "Verdana", Verdana, Arial, sans-serif;
     background-color: white;
-    border: solid;
-    border-color: white;
-    border-width: 2px;
-    color: black;
     padding: 22px 48px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
 }
 
 #cellEveManStyle{
