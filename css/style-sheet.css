@@ -260,6 +260,7 @@ li a:hover:not(.active){
     filter: alpha(opacity=80);
     opacity: 0.8;
 }
+
 /* codul pentru third-section */
 #third-section{
     background-color: #c45d46;
@@ -331,7 +332,7 @@ li a:hover:not(.active){
 }
 
 #third-section div ul li a:hover img{
-    filter: alpha(opacity=70);/
+    filter: alpha(opacity=70);
     opacity: 0.7;
 }
 #third-section div ul li a span{
