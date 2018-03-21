@@ -27,8 +27,7 @@ li a:hover:not(.active){
 }
 
 #header {
-    background: #fff;
-    color: #073656;
+    background: #ffffff;
     cursor: default;
     height: 3em;
     left: 0;
@@ -73,7 +72,7 @@ li a:hover:not(.active){
 }
 
 #header nav > ul > li a:hover:not(.button) {
-    color: #9b6fdb;
+    color: #630031;
 }
 
 #header nav > ul > li:first-child {
@@ -738,14 +737,7 @@ input {
      height:100px;
      margin-top:50px;
 }
-h1{
-    font-weight:bold;
-    font-family:Arial;
-    padding-top:50px;
-    text-align:left;
-    margin-left:300px;
-    font-family:Georgia, serif;
-}
+
 .calendar-views span {
   font-size: 14px;
   font-weight:bold;
