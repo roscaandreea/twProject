@@ -447,6 +447,136 @@ li a:hover:not(.active){
 .fourth-section{
     margin:800px;
 }
+
+/* styl pentru formulatul de creare a invitaiilor si a eventurilor*/
+#firstSectionCreateEvent{
+    padding-top: 5%;
+    padding-left: 12%;
+    padding-bottom: 5%;
+    width: 75%;
+}
+
+#firstSectionInvitation{
+    padding-top: 5%;
+    padding-left: 30%;
+    padding-bottom: 5%;
+    width: 35%;
+}
+
+#firstSectionInvitation{
+    padding-top: 5%;
+    padding-left: 30%;
+    padding-bottom: 5%;
+    width: 35%;
+}
+
+#managerDiv{
+    background-color:inherit;
+    border: solid;
+    border-width: 2px;
+    border-color: #ffaa99;
+    padding-top: 3%;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-bottom: 10%;
+    align: center;
+
+}
+
+#formDiv{
+    background-color:white;
+    border: solid;
+    border-width: 2px;
+    border-color: #ffaa99;
+    box-shadow: 10px 10px 10px #888888;
+    padding-top: 3%;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-bottom: 10%;
+    align: center;
+    
+}
+
+#formDiv > form > h1{
+    color:#ffaa99;
+    display: block;
+    font-size: 250%;
+    margin-bottom: 20px;
+    padding-top: 8px;
+    padding-left: 8px;
+    padding-right: 8px;
+    padding-bottom: 30px;
+}
+
+#formDiv > form > button{
+    font: 14px/1.4 "Verdana", Verdana, Arial, sans-serif;
+    background-color: #ffaa99;
+    border: none;
+    color: white;
+    padding: 22px 48px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+
+#formDiv > form > button:hover{
+    box-shadow:3px 3px 10px #888888;
+}
+
+#formDiv > form > button:active{
+    background-color: #ffccc1;
+
+}
+
+input {
+    font: 14px/1.4 "Verdana", Verdana, Arial, sans-serif;
+    background-color: inherit;
+    width: 100%;
+    padding: 12px 20px;
+    margin: 2px 0;
+    box-sizing: border-box;
+    border: solid;
+    border-width: 2px;
+    border-color: #ffaa99;
+  }
+  
+  #formDiv > form>label>div {
+    padding-top: 10px;
+  }
+
+  label {
+    color:#ffaa99;
+    display: block;
+    margin-bottom: 20px;
+    padding: 8px;
+  }
+
+  textarea {
+    font: 14px/1.4 "Verdana", Verdana, Arial, sans-serif;
+    background-color: inherit;
+    width: 100%;
+    padding: 12px 20px;
+    margin: 2px 0;
+    box-sizing: border-box;
+    border: solid;
+    border-width: 2px;
+    border-color: #ffaa99;
+  }
+
+  #formDiv > form > label > select {
+    font: 14px/1.4 "Verdana", Verdana, Arial, sans-serif;
+    background-color: inherit;
+    width: 100%;
+    padding: 12px 20px;
+    margin: 2px 0;
+    box-sizing: border-box;
+    border: solid;
+    border-width: 2px;
+    border-color: #ffaa99;
+  }
+
+
 /*codul pentru footer*/
 #footer{
     background:#ffdd99;
