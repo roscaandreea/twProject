@@ -1,5 +1,5 @@
 
-ul {
+.ul1 {
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -159,6 +159,4 @@ li a:hover:not(.active){
     height:50px;
     margin-left:48%;
 }
-mySlides{
-    width:100%;
-}
+
