@@ -560,7 +560,20 @@ input {
     border-width: 2px;
     border-color: #ffaa99;
   }
-  
+
+
+#country{
+    font: 14px/1.4 "Verdana", Verdana, Arial, sans-serif;
+    background-color: inherit;
+    width: 100%;
+    padding: 12px 20px;
+    margin: 2px 0;
+    box-sizing: border-box;
+    border: solid;
+    border-width: 2px;
+    border-color: #ffaa99;
+  }
+
   #formDiv > form>label>div {
     padding-top: 10px;
   }
@@ -595,6 +608,7 @@ input {
     border-width: 2px;
     border-color: #ffaa99;
   }
+
 
   /* Event Manager Page Table Style*/
 
