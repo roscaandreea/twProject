@@ -724,3 +724,168 @@ input {
     margin-left:48%;
 }
 
+/*cod pentru pagina de statistici*/
+ 
+ #container1{
+    background-color:#ffaa99;
+    width:100%;
+    min-height:auto;
+
+ }
+#container1.title{
+     background-color:#ffaa99;
+     width:100%;
+     height:100px;
+     margin-top:50px;
+}
+h1{
+    font-weight:bold;
+    font-family:Arial;
+    padding-top:50px;
+    text-align:left;
+    margin-left:300px;
+    font-family:Georgia, serif;
+}
+.calendar-views span {
+  font-size: 14px;
+  font-weight:bold;
+  color:#ffffff;
+  padding: 6px 14px;
+}
+.panel-body {
+  display: flex;
+  height: 340px;
+}
+.categories {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-basis: 25%;
+  padding: 39px 0px 41px 26px;
+}
+.category {
+  display: flex;
+  flex-direction: column;
+}
+.category span:first-child {
+  font-weight: 300;
+  font-size: 14px;
+  opacity: 0.6;
+  color: #fff;
+  margin-bottom: 6px;
+}
+.category span:last-child {
+  font-size: 32px;
+  font-weight: 300;
+  color: #fff;
+}
+.chart {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 2;
+  position: relative;
+}
+ 
+.types {
+  display: flex;
+  justify-content: space-between;
+  width: 215px;
+  margin-top: 30px;
+  margin-bottom: 50px;
+}
+
+ 
+.dataset-1 {
+  animation: raise .8s linear 1;
+  transform-origin: bottom;
+}
+.dataset-2 {
+  animation: raise 1.6s linear 1;
+  transform-origin: bottom;
+}
+.dataset-3 {
+  animation: raise 1.8s linear 1;
+  transform-origin: bottom;
+}
+ 
+.lines {
+  opacity: 0;
+  animation: showlines 0.6s linear 1.6s;
+  animation-fill-mode: forwards;  
+}
+ 
+@keyframes showlines {
+  to { opacity: 0.2; }
+}
+ 
+@keyframes showstats {
+  to { opacity: 1; }
+}
+ 
+@keyframes raise {
+  0% { transform: scaleY(0.01); }
+  75% { transform: scaleY(1.1); }
+  100% { transform: scaleY(1); }
+}
+
+
+#container2{
+    background-color:#eeff99;
+    width:100%;
+    min-height:auto;
+
+ }
+
+#container2.title{
+     background-color:#eeff99;
+     width:100%;
+     height:100px;
+     margin-top:50px;
+}
+
+.container {
+    width: 70%; 
+    background-color: #ddd; 
+}
+
+
+.skills {
+    text-align: right; 
+    padding-right: 20px; 
+    line-height: 40px; 
+    color: white; 
+}
+.cabaret 
+{width: 90%;
+ background-color: #4CAF50;
+} 
+.futurism {width: 80%;
+ background-color: #2196F3;
+} 
+.maskedball {width: 65%;
+ background-color: #f44336;
+} 
+.other {width: 60%; 
+    background-color: #808080;
+} 
+
+.container3{
+    margin-left:100px;
+}
+
+#container4{
+    background-color:#edd6a7;
+    width:100%;
+    min-height:auto;
+
+ }
+
+#container5{
+    background-color:#ffffff;
+    width:100%;
+    min-height:auto;
+
+ }
+
