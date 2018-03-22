@@ -1180,7 +1180,7 @@ input {
 .form-register-with-email:after{
     content: 'OR';
     position: absolute;
-    bottom: 425px;
+    bottom: 398px;
     right: -100px;
 
     border-radius: 50%;
