@@ -884,15 +884,15 @@ input {
 /*cod pt login */
 
 
-html{
-    background-color: #f3f3f3;
-}
 
 .form-login{
     max-width: 1000px;
     width: 100%;
     margin: 0 auto;
-
+    padding-top: 3%;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-bottom: 5%;
     font: bold 14px sans-serif;
     text-align: center;
 }
@@ -909,9 +909,12 @@ html{
     width: 570px;
     box-sizing: border-box;
     background-color: #ffffff;
-    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
     padding: 60px 80px;
     margin-bottom: 32px;
+    border: solid;
+    border-width: 2px;
+    border-color: #ffaa99;
+    box-shadow: 10px 10px 10px #888888;
 }
 
 .form-log-in-with-email .form-row{
@@ -1058,84 +1061,18 @@ html{
     margin: 8px auto;
     text-decoration: none;
 }
-
-/*	Making the form responsive. Remove these media queries
-    if you don't need the form to work on mobile devices. */
-
-@media (max-width: 900px) {
-
-    .form-login{
-        margin: 20px auto;
-    }
-
-    .form-log-in-with-email{
-        position: relative;
-        display: block;
-        margin: 0 0 50px;
-    }
-
-    .form-log-in-with-email .form-white-background{
-        margin: 0 auto 32px;
-    }
-
-    .form-log-in-with-email:after{
-        bottom: -80px;
-        left: 50%;
-        margin-left: -25px;
-    }
-
-    .form-sign-in-with-social{
-        margin-top: 60px;
-    }
-
-}
-
-@media (max-width: 600px) {
-
-    .form-log-in-with-email .form-white-background{
-        width: 300px;
-        padding-left: 35px;
-        padding-right: 35px;
-    }
-
-    .form-log-in-with-email .form-row > label span{
-        display: block;
-        text-align: left;
-        padding: 0 0 10px;
-    }
-
-    .form-log-in-with-email .form-email,
-    .form-log-in-with-email .form-password{
-        display: block;
-        margin: 0 auto;
-    }
-
-    .form-log-in-with-email:after{
-        bottom: -80px;
-        left: 50%;
-        margin-left: -25px;
-    }
-
-    .form-log-in-with-email .form-forgotten-password,
-    .form-log-in-with-email .form-create-an-account{
-        display: block;
-        margin: 5px auto;
-        max-width: 180px;
-    }
-
-}
-
 /*cod pt register*/
 
-html{
-    background-color: #f3f3f3;
-}
+
 
 .form-register{
     max-width: 1000px;
     width: 100%;
     margin: 0 auto;
-
+	padding-top: 3%;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-bottom: 0%;
     font: bold 14px sans-serif;
     text-align: center;
 }
@@ -1152,9 +1089,12 @@ html{
     width: 570px;
     box-sizing: border-box;
     background-color: #ffffff;
-    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
     padding: 60px 80px;
     margin-bottom: 35px;
+    border: solid;
+    border-width: 2px;
+    border-color: #ffaa99;
+    box-shadow: 10px 10px 10px #888888;
 }
 
 .form-register-with-email .form-row{
@@ -1240,7 +1180,7 @@ html{
 .form-register-with-email:after{
     content: 'OR';
     position: absolute;
-    bottom: 330px;
+    bottom: 425px;
     right: -100px;
 
     border-radius: 50%;
@@ -1313,71 +1253,4 @@ html{
     border-radius: 2px;
     margin: 8px auto;
     text-decoration: none;
-}
-
-/*	Making the form responsive. Remove these media queries
-    if you don't need the form to work on mobile devices. */
-
-@media (max-width: 900px) {
-
-    .form-register{
-        margin: 20px auto;
-    }
-
-    .form-register-with-email{
-        position: relative;
-        display: block;
-        margin: 0;
-    }
-
-    .form-register-with-email .form-white-background{
-        margin: 0 auto 32px;
-    }
-
-    .form-register-with-email:after{
-        bottom: -80px;
-        left: 50%;
-        margin-left: -25px;
-    }
-
-    .form-sign-in-with-social {
-        margin-top: 105px;
-    }
-
-}
-
-@media (max-width: 600px) {
-
-    .form-register-with-email .form-white-background{
-        width: 300px;
-        padding-left: 35px;
-        padding-right: 35px;
-    }
-
-    .form-register-with-email .form-row > label span{
-        display: block;
-        text-align: left;
-        padding: 0 0 10px;
-    }
-
-    .form-register-with-email input{
-        display: block;
-        margin: 0 auto;
-    }
-
-    .form-register-with-email .form-checkbox input{
-        display: inline-block;
-        margin-left: 0;
-    }
-
-    .form-register-with-email .form-checkbox span{
-        width: 200px !important;
-    }
-
-    .form-register-with-email:after{
-        bottom: -80px;
-        left: 50%;
-        margin-left: -25px;
-    }
-
 }
