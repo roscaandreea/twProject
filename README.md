@@ -9,11 +9,4 @@ https://www.programmableweb.com/category/social/api
 https://jsonauts.github.io/
 Persoane alocate: 4
 
-MulS (Multi-Search Application)
-B
-Se doreste implementarea unei aplicatii Web ce permite cautarea unor resurse de interes (documente Web, imagini, filme etc.) pe baza unui termen ori a unei expresii folosind mai multe motoare de cautare (DuckDuckGo si altele). Pentru fiecare resursa descoperita, instrumentul va prezenta cele mai importante informatii reunite – preluate, eventual, din mai multe surse. Aceste informatii vor putea fi salvate local (ca flux de stiri Atom) si/sau partajate online via serviciul Pocket. Suplimentar, se permite compararea rezultatelor obtinute, cu aplicarea unor posibile filtre -- e.g., doar resursele disponibile pe un anumit domeniu.
 
-  Resurse suplimentare:
-   https://duckduckgo.com/api
-   https://www.programmableweb.com/category/search/api
-   https://getpocket.com/developer/
