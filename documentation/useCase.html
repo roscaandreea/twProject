@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="ro"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width">
+	<title>Raportul Proiectului MaOr</title>
+	<link rel="stylesheet" href="./css/scholarly.css">
+	<link rel="stylesheet" href="http://jade-lang.com/style/bundle.css">
+	<link rel="stylesheet" href="./css/prism-coy.css">
+	<link rel="stylesheet" href="http://expressjs.com/css/prism.css">
+	<link rel="stylesheet" href="./css/index.0854e9c6.css">
+
+	<script src="./script/prism.js" defer=""></script>
+    <link rel="stylesheet" type="text/css" href="stylesheet.css">
+</head>
+<body prefix="schema: http://schema.org/ xsd: http://www.w3.org/2001/XMLSchema# sa: https://ns.science.ai/">
+
+<header>
+
+	<p class="title">MaOr</p>
+	<p class="subtitle">Masked Ball Web Organizer</p>
+</header>
+	<article id="what" typeof="schema:ScholarlyArticle" reMaOrce="#">
+		<h1><strong>Masked Ball Web Organizer</strong></h1>
+		<section>
+			<ol>
+				<li property="schema:author" typeof="sa:ContributorRole">
+				        <span property="schema:familyName">Rosca</span>
+						<span property="schema:givenName">Andreea-Maria</span>
+					
+		</section>
+
+		<section>
+			<h3><strong>Cuprins:</strong></h3>
+			<ol>
+				<li><a href="#descrieree">1.Descriere</a></li>
+				<li><a href="#actori" >2.Actori/Interese</a></li>
+				<li><a href="#scenarii">3.Scenarii de Utilizare</a></li>
+				<ol>
+				  <li><a >3.1.Utilizatorul isi creiaza un cont</a></li>
+				  <li><a >3.2.Utilizatorul se logheaza</a></li>
+				  <li><a >3.3Utilizatorul creiaza un event</a></li>
+				</ol> 
+			</ol>
+		</section>
+
+		<section typeof="sa:Abstract">
+		<a name="descriere"></a>
+		<div id="descrieree">
+		<h1><strong>1.Descriere</strong></h1>
+
+		  <p>&nbsp;&nbsp;&nbsp;&nbsp; Se doreste realizarea unei aplicatii web care
+        sa gestioneze organizarea de evenimente de divertisment de tipul balurilor
+        mascate pe diferite tematici.</p>
+
+      <p>&nbsp;&nbsp;&nbsp;&nbsp;  Aplicatia permite utilizatorilor crearea de evenimente,
+      updatarea unui eveniment si adaugarea de feedback.</p>
+
+      <p>&nbsp;&nbsp;&nbsp;&nbsp; Crearea unui eveniment se poate face doar in interfata aplicatiei.
+      Pe baza feedback-ului primit,aplicatia va  realiza statistici.Acestea presupun cuantificarea
+      raspunsurilor fie prin verificarea tipului de intrebare din feedback fie ultilizand
+      mecanisme corespunzatoare care extrag semnificatia datelor din raspuns.</p>
+
+
+      <p>&nbsp;&nbsp;&nbsp;&nbsp; Datele salavate vor fi disponibile sub format csv si json iar noutatile 
+      despre viitoare evenimente in fluxuri RSS(link).</p>
+      </div>
+
+      <div id="actori">
+
+    <h2><strong>2.Actori/Interese</strong></h2>
+
+      <p>&nbsp;&nbsp;&nbsp;&nbsp;Creator Site: pune la dispozitia utilizatorilor o
+        platforma specializata in organizarea de evenimente si expediere de invitatii prin e-mail
+        la aceste evenimente.</p>
+
+      <p>&nbsp;&nbsp;&nbsp;&nbsp;Utilizatorii : dispun de o cantitate de informatii si au dreptul
+      de a crea un eveniment,de a face update la un eveniment sau de a trimite invitatii.</p>
+
+      <p>&nbsp;&nbsp;&nbsp;&nbsp;Publicul : primeste invitatii prin e-mail la un anumit eveniment
+      si poate vizualiza statisticile create pe baza unui eveniment trecut.</p>
+      </div>
+     <div id="scenarii">
+    <h2><strong>3.Scenarii de utilizare</strong></h2>
+
+    <h3>3.1.Utilizatorul isi creaza un cont</h3>
+
+    <h4>3.1.1.Obiectiv/Context</h4>
+      <p>&nbsp;&nbsp;&nbsp;&nbsp; Utilizatorul obtine un cont
+        prin care poate accesa functionalitatile platformei . </p>
+
+    <h4>3.1.2.Pasi/Scenariu</h4>
+      <p>&nbsp;&nbsp;&nbsp;&nbsp; Utilizatorul apasa butonul "register"
+      aflat in bara de navigare a aplicatiei web.Odata cu aceasta actiune,i se deschide o noua 
+      pagina unde are de completat un formular.El isi introduce numele,o parola care respecta
+      standardele de securitate si un e-mail valid.Apasa butonul "Register" din partea inferioara
+      a formularului.Daca datele nu sunt acceptate de sistem,acesta introduce date.</p>
+
+    <h4>3.1.3.Extensii</h4>
+      <p>&nbsp;&nbsp;&nbsp;&nbsp; Utilizatorul nu vrea sa isi faca un cont.
+      In acest caz sistemul ii pune la dispozitie posibilitatea de a se 
+      inregistra cu un alt cont(google,facebook,twitter).</p>
+
+
+    <h3>3.2.Utilizatorul se logheaza</h3>
+
+    <h4>3.2.1.Obiectiv/Context</h4>
+      <p>&nbsp;&nbsp;&nbsp;&nbsp; User-ul va putea sa realizeze actiunile dorite
+      puse la dispozitie de catre aplicatie.</p>
+
+    <h4>3.2.2.Pasi/Scenariu</h4>
+
+      <p>&nbsp;&nbsp;&nbsp;&nbsp; Dupa inregistrare,user-ul apasa
+      butonul "Login" din bara de navigare.Acesta il trimite la o noua pagina
+      unde va introduce email-ul,parola din inregistrare si apasa butonul "login".</p>
+
+    <h4>3.2.3.Extensii</h4>
+
+      <p>&nbsp;&nbsp;&nbsp;&nbsp; Daca email-ul/parola sunt introduse gresit,in interfata apare 
+      o eroare(email/parola invalide) si acestea vor fi introduse dinou,de data aceasta corect.</p>
+
+      <p>&nbsp;&nbsp;&nbsp;&nbsp; Utilizatorul isi uita parola ,
+        datorita lipsei unui sistem de recuperare a parolei acesta trebuie sa
+        contacteze administatorii sitului.</p>
+
+    <h3>3.3.Utilizatoul creaza un event</h3>
+
+    <h4>3.3.1.Obiectiv/Context</h4>
+
+      <p>&nbsp;&nbsp;&nbsp;&nbsp; Publicarea unui nou eveniment.</p>
+
+    <h4>3.3.2.Pasi/Scenariu</h4>
+
+      <p>&nbsp;&nbsp;&nbsp;&nbsp;Utilizatorul (dupa logare) apasa pe butonul "EventManager"
+      din bara de navigare.Acesta il trimite la o noua pagina unde apar toate event-urile.
+      Sub event-urile deja existente exista un buton "Create New Event".
+      Userul apasa acel buton,il trimite la o noua pagina unde exista un formular pentru
+      crearea unui nou eveniment.Userul completeaza formularul cu event-ul pe care doreste sa il publice.
+      Userul apasa butonul "Create event" din partea inferioara formularului.Eventul s-a creat.</p>
+
+    <h4>3.3.3.Extensii</h4>
+
+      <p>&nbsp;&nbsp;&nbsp;&nbsp;Daca nu s-a completat vreun camp din acel formular,
+      evenimentul nu se va crea.</p>
+
+    <h3>3.4.Userul updateaza un event</h3>
+
+    <h4>3.4.1.Obiectiv/Context</h4>
+      <p>&nbsp;&nbsp;&nbsp;&nbsp; Adaugarea unor schimbari organizatorice aparute dupa crearea event-ului.</p>
+
+    <h4>3.4.2.Pasi/Scenariu</h4>
+      <p>&nbsp;&nbsp;&nbsp;&nbsp; Utilizatorul va alege sa apese butonul "edit event" din dreptul oricarui
+      eveniment deja creat.
+      Acesta va trimite la formularul event-ului respcetiv si acolo userul va modifica campul pe care doreste
+      sa il schimbe(data,tema,locatie etc).User-ul apasa butonul "create event" de sub formular,de aceasta data
+      facand doar update nu creare in sine de event.</p>
+    <h4>3.4.3.Extensii</h4>
+
+    <p>&nbsp;&nbsp;&nbsp;&nbsp;Daca event-ul a fost deja,acesta nu va mai fi modificat pentru ca e redundant.</p>
+
+    <h3>3.5.Userul adauga feedback</h3>
+
+    <h4>3.5.1.Obiectiv/Context</h4>
+      <p>&nbsp;&nbsp;&nbsp;&nbsp; Colectarea de impresii de la un anumit eveniment care vor ajuta
+      la crearea de statistici.</p>
+
+    <h4>3.5.2.Pasi/Scenariu</h4>
+      <p>&nbsp;&nbsp;&nbsp;&nbsp; Utilizatorul va alege sa apese butonul "add feedback" din dreptul oricarui
+      eveniment deja creat.
+      Acesta va trimite la un formular care permite  sa adaugi noi intrebari completand cu tipul intrebarii si intrebarea respectiva 
+      ,acest lucru putand fi realizat doar de cel care a creat event-ul.Ceilalti useri vor apasa butonul "finalizeFeedbackForm" aflat 
+      pe aceiasi pagina,care va trimite la formularul de feebcak efectiv.Userii il completeaza apoi apasa butonul "submit".</p>
+    <h4>3.5.3.Extensii</h4>
+
+    <p>&nbsp;&nbsp;&nbsp;&nbsp;Daca un alt user care nu a creat event-ul incearca sa introduca noi intrebari pentru feedback,
+    interfata va afisa un mesaj de eroare("permission denied").</p>
+
+    <h3>3.6.Userul trimite invitatii</h3>
+
+    <h4>3.6.1.Obiectiv/Context</h4>
+      <p>&nbsp;&nbsp;&nbsp;&nbsp; Publicul va primii invitatii personalizate la un anumit eveniment la care ei
+      pot sa participe sau sa refuze.</p>
+
+    <h4>3.5.2.Pasi/Scenariu</h4>
+      <p>&nbsp;&nbsp;&nbsp;&nbsp; Utilizatorul va alege sa apese butonul "create invite" din dreptul oricarui
+      eveniment deja creat.Acesta trimite la pagina cu formularul pentru trimiterea invitatiei.User-ul(creatorul
+      event-ului) completeaza formularul(numele creatorului,numele invitatului,email-ul invitatului si un mesaj personalizat)
+      si apasa butonul "submit" de sub formular.</p>
+    <h4>3.5.3.Extensii</h4>
+
+    <p>&nbsp;&nbsp;&nbsp;&nbsp;Daca nu se completeaza toate campurile din formular,invitatia nu va fi trimisa.</p>
+    </div>
+    </section>
+
+		
+	</article>
+    <footer>
+      <p>
+        <a href="http://www.info.uaic.ro/bin/Main/">FII</a>
+		•
+        <a href="http://profs.info.uaic.ro/~busaco/teach/courses/web/">Tehnologii Web</a>
+        •
+		 <a href="http://profs.info.uaic.ro/~busaco/teach/courses/web/projects/xml-transform.php?pag=projects">Proiecte</a>
+      </p>
+    </footer>
+</body></html>
