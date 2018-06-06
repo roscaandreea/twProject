@@ -1,31 +1,8 @@
-<!DOCTYPE html>
-<html>
-
-<head>
-    <link rel="stylesheet" type="text/css" href="css/style-sheet.css">
-    <meta charset="UTF-8">
-    <title>Masked Ball Web Organizer</title>
-</head>
-<body id="total_page">
-<!-- codul pentru bara de navigare -->
-<header id="header">
-    <nav id="nav">
-     <ul class="ul1">
-        <li > <a href="register.html"> Register </a> </li>
-        <li > <a href="login.html"> Login </a> </li>
-        <li > <a href="contact_us.html"> Contact</a>  </li>
-        <li > <a href="about.html"> About </a> </li>
-        <li > <a href="statistics.html">Statistics</a></li>
-        <li > <a href="index.html">Home</a></li>
-        <h1 > <a href="index.html"> <img src="images/logo.png" alt=" "> </a></h1>
-      </ul>
-    </nav>
-</header>
+<?php
+    include_once 'Header.php';
+?>
     
-
-        
-
-        <form class="form-login" method="post" action="#">
+        <form class="form-login" method="POST" action="script/logIn.php">
 
             <div class="form-log-in-with-email">
 
@@ -50,12 +27,12 @@
                     </div>
 
                     <div class="form-row">
-                       <button type="submit"> <a href="index2.html">Log in</a></button>
+                       <button type="submit" name="submit"> Log in</a></button>
                     </div>
 
                 </div>
 
-                <a href="register.html" class="form-create-an-account">Create an account </a>
+                <a href="register.php" class="form-create-an-account">Create an account </a>
 
             </div>
 
@@ -69,18 +46,31 @@
                 <a href="#" class="form-facebook-button">Facebook</a>
                 <a href="#" class="form-twitter-button">Twitter</a>
 
+                <?php
+
+                if(!isset($_GET['login'])){
+                    exit();
+                }else{
+                $singUpCheck=$_GET['login'];
+
+                if($singUpCheck == "empty"){
+                    echo "You did not fill all the fields!";
+                }else if($singUpCheck=="error"){
+                    echo "Something went wrong!Please try again.";
+                    exit();
+                }else if($singUpCheck=="succes"){
+                    echo "You have been singed un!";
+                }
+}
+
+?>
+
             </div>
 
         </form>
 
     
 
-</body>
-<footer id="footer">
-    <a href="https://github.com/roscaandreea/twProject">
-        <img id="footer-icon2" src="images/github-icon.png" >
-    </a>
-    <p class="copyright"> ©Copyright Proiectul29 <br><a href="license.html">License terms</a>
-    </p>
-</footer>
-</html>
+<?php
+    include_once 'Footer.php';
+?>

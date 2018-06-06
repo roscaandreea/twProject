@@ -1,30 +1,8 @@
-<!DOCTYPE html>
-<html>
-
-<head>
-    <link rel="stylesheet" type="text/css" href="css/style-sheet.css">
-    <meta charset="UTF-8">
-    <title>Masked Ball Web Organizer</title>
-</head>
-<body id="total_page">
-<!-- codul pentru bara de navigare -->
-<header id="header">
-    <nav id="nav">
-     <ul class="ul1">
-        <li > <a href="register.html"> Register </a> </li>
-        <li > <a href="login.html"> Login </a> </li>
-        <li > <a href="contact_us.html"> Contact</a>  </li>
-        <li > <a href="about.html"> About </a> </li>
-        <li > <a href="statistics.html">Statistics</a></li>
-        <li > <a href="index.html">Home</a></li>
-        <h1 > <a href="index.html"> <img src="images/logo.png" alt=" "> </a></h1>
-      </ul>
-    </nav>
-</header>
-
+<?php
+    include_once 'Header.php';
+?>
         
-
-        <form class="form-register" method="post" action="#">
+        <form action="script/signUp.php" class="form-register" method="POST" >
 
             <div class="form-register-with-email">
 
@@ -63,12 +41,12 @@
                     </div>
 
                     <div class="form-row">
-                        <button type="submit">Register</button>
+                        <button type="submit" name="submit">Sign Up</button>
                     </div>
 
                 </div>
 
-                <a href="login.html" class="form-log-in-with-existing">Already have an account? Login here &rarr;</a>
+                <a href="login.php" class="form-log-in-with-existing">Already have an account? Login here &rarr;</a>
 
             </div>
 
@@ -81,17 +59,37 @@
                 <a href="#" class="form-google-button">Google</a>
                 <a href="#" class="form-facebook-button">Facebook</a>
                 <a href="#" class="form-twitter-button">Twitter</a>
+            
+            
+            <?php
+
+            if(!isset($_GET['signUp'])){
+                exit();
+            }else{
+                $singUpCheck=$_GET['signUp'];
+
+                if($singUpCheck == "empty"){
+                    echo "You did not fill all the fields!";
+                }else if($singUpCheck=="errorInvalidChar"){
+                    echo "You have used invalid characters!";
+                    exit();
+                }else if($singUpCheck=="invalidEmail"){
+                    echo "You used an invalid e-mail!";
+                    exit();
+                }else if($singUpCheck=="succes"){
+                    echo "You have been singed un!";
+                }
+            }
+            
+            ?>
+
 
             </div>
 
+            
+
         </form>
 
-</body>
-<footer id="footer">
-    <a href="https://github.com/roscaandreea/twProject">
-        <img id="footer-icon2" src="images/github-icon.png" >
-    </a>
-    <p class="copyright"> ©Copyright Proiectul29 <br><a href="license.html">License terms</a>
-    </p>
-</footer>
-</html>
+<?php
+    include_once 'Footer.php';
+?>

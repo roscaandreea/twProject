@@ -1,25 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <link rel="stylesheet" type="text/css" href="css/style-sheet.css">
-    <meta charset="UTF-8">
-    <title>Masked Ball Web Organizer</title>
-</head>
-<body id="total_page">
-<!-- codul pentru bara de navigare -->
-<header id="header">
-    <nav id="nav">
-     <ul class="ul1">
-        <li > <a href="register.html"> Register </a> </li>
-        <li > <a href="login.html"> Login </a> </li>
-        <li > <a href="contact_us.html"> Contact</a>  </li>
-        <li > <a href="about.html"> About </a> </li>
-        <li > <a href="statistics.html">Statistics</a></li>
-        <li > <a href="index.html">Home</a></li>
-        <h1 > <a href="index.html"> <img src="images/logo.png"> </a></h1>
-      </ul>
-    </nav>
-</header>
+<?php
+    include_once 'Header.php';
+?>
 
 <section id="firstSectionCreateEvent">
         <div id="formDiv">
@@ -87,12 +68,6 @@
         </div>
 </section>
 
-</body>
-<footer id="footer">
-    <a href="https://github.com/roscaandreea/twProject">
-        <img id="footer-icon2" src="images/github-icon.png" >
-    </a>
-    <p class="copyright"> ©Copyright Proiectul29 <br><a href="license.html">License terms</a>
-    </p>
-</footer>
-</html>
+<?php
+    include_once 'Footer.php';
+?>
