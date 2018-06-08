@@ -32,6 +32,7 @@ if(isset($_POST['submit'])){
                     //Logg
                     $_SESSION['user_mail']=$row['e_mail'];
                     $_SESSION['user_passwd']=$row['acc_password'];
+                    $_SESSION['user_identity']=$row['user_id'];
 
                     header("Location: ../index.php?logIn=succes");
                     exit();
