@@ -14,7 +14,7 @@
                '<form action="invitation.php" method="POST">
   					<button type="submit" value=" '. $id_event.'" name="idevent"><img  id=managerIcons src="images/mail-512.png" alt=""></button>
   				</form>
-  				<form action="createEvent.php" method="POST">
+  				<form action="editEvent.php" method="POST">
   					<button type="submit" value=" '. $id_event.'" name="idevent"><img id=managerIcons src="images/box_edit-512.png" alt=""></button>
   				</form>
   				<form action="feedBackFromEditor.php" method="POST">
