@@ -4,9 +4,9 @@
         
         include_once 'dbHandler.php';
 
-        $nameFull=mysqli_real_escape_string($conn,$_POST['name']) ;
-        $email=mysqli_real_escape_string($conn, $_POST['email']);
-        $passwd=mysqli_real_escape_string($conn, $_POST['password']);
+        $nameFull=$_POST['name'] ;
+        $email=$_POST['email'];
+        $passwd= $_POST['password'];
 
         if(empty($nameFull) || empty($email) ||empty($passwd)){
             header("Location: ../register.php?signUp=empty");

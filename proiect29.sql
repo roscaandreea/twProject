@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Jun 07, 2018 at 05:45 PM
+-- Generation Time: Jun 08, 2018 at 07:25 PM
 -- Server version: 10.1.32-MariaDB
 -- PHP Version: 7.1.17
 
@@ -59,10 +59,21 @@ CREATE TABLE `events` (
   `eventName` varchar(45) NOT NULL,
   `theme` varchar(45) NOT NULL,
   `location` varchar(45) NOT NULL,
+  `noOfPeople` int(7) DEFAULT NULL,
   `musicType` int(7) NOT NULL,
   `meniuType` int(7) NOT NULL,
-  `description` varchar(50) NOT NULL
+  `description` varchar(50) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `events`
+--
+
+INSERT INTO `events` (`events_id`, `user_id`, `eventName`, `theme`, `location`, `noOfPeople`, `musicType`, `meniuType`, `description`) VALUES
+(10, 14, 'SaturdayNightCabaret', 'abstract', 'Iasi', 10, 11, 22, 'This is a description'),
+(12, 14, 'SaturdayNight', 'abstract', 'Iasi', 20, 11, 22, 'This is a description'),
+(13, 14, 'NightCabaret', 'abstract', 'Iasi', 10, 11, 22, 'This is a description'),
+(14, 14, 'SaturdayCabaret', 'abstract', 'Iasi', 10, 11, 22, 'This is a description');
 
 -- --------------------------------------------------------
 
@@ -99,6 +110,13 @@ CREATE TABLE `meniuType` (
   `meniuType` varchar(45) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Dumping data for table `meniuType`
+--
+
+INSERT INTO `meniuType` (`meniuType_id`, `meniuType`) VALUES
+(22, 'suedeza');
+
 -- --------------------------------------------------------
 
 --
@@ -109,6 +127,13 @@ CREATE TABLE `musicType` (
   `musicType_id` int(7) NOT NULL,
   `musicType` varchar(45) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `musicType`
+--
+
+INSERT INTO `musicType` (`musicType_id`, `musicType`) VALUES
+(11, 'Classic');
 
 -- --------------------------------------------------------
 
@@ -177,9 +202,8 @@ ALTER TABLE `contactUs`
 -- Indexes for table `events`
 --
 ALTER TABLE `events`
-  ADD PRIMARY KEY (`events_id`),
-  ADD KEY `musicType` (`musicType`),
-  ADD KEY `meniuType` (`meniuType`);
+  ADD PRIMARY KEY (`events_id`);
+ 
 
 --
 -- Indexes for table `feedbackForm`
@@ -233,6 +257,36 @@ ALTER TABLE `user_accounts`
 --
 
 --
+-- AUTO_INCREMENT for table `contactUs`
+--
+ALTER TABLE `contactUs`
+  MODIFY `contactUs_id` int(7) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+
+--
+-- AUTO_INCREMENT for table `events`
+--
+ALTER TABLE `events`
+  MODIFY `events_id` int(7) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+
+--
+-- AUTO_INCREMENT for table `feedbackForm`
+--
+ALTER TABLE `feedbackForm`
+  MODIFY `feedbackForm_id` int(7) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+
+--
+-- AUTO_INCREMENT for table `meniuType`
+--
+ALTER TABLE `meniuType`
+  MODIFY `meniuType_id` int(7) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
+
+--
+-- AUTO_INCREMENT for table `musicType`
+--
+ALTER TABLE `musicType`
+  MODIFY `musicType_id` int(7) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+
+--
 -- AUTO_INCREMENT for table `user_accounts`
 --
 ALTER TABLE `user_accounts`
@@ -245,9 +299,6 @@ ALTER TABLE `user_accounts`
 --
 -- Constraints for table `events`
 --
-ALTER TABLE `events`
-  ADD CONSTRAINT `events_ibfk_1` FOREIGN KEY (`musicType`) REFERENCES `musicType` (`musicType_id`),
-  ADD CONSTRAINT `events_ibfk_2` FOREIGN KEY (`meniuType`) REFERENCES `meniuType` (`meniuType_id`);
 
 --
 -- Constraints for table `feedbackForm`

@@ -1,33 +1,32 @@
 <?php
     include_once 'Header.php';
 ?>
-
 <section id="firstSectionCreateEvent">
         <div id="formDiv">
-            <form>
+            <form action="script/create_event.php" method="POST">
 
                 <h1>Create Event</h1>
 
                     <label><b>Event Name:</b>
                         <div>
-                          <input type="text" placeholder="Enter event name" name="name" autofocus required>
+                          <input type="text" placeholder="Enter event name" name="nameEvent" autofocus required>
                         </div>
                       </label>
 
                       <label><b>Theme:</b>
                         <div>
-                          <input type="text" placeholder="Enter theme" autofocus required>
+                          <input type="text" placeholder="theme" name="theme" autofocus required>
                         </div>
                       </label>
 
                       <label><b>Location:</b>
                         <div>
-                          <input type="text" placeholder="Enter location" autofocus required>
+                          <input type="text" placeholder="location" name="location" autofocus required>
                         </div>
                       </label>
 
                       <label><b>Number of people:</b>
-                        <select>
+                        <select name="noOfPeople">
                               <option>25</option>
                               <option>50</option>
                               <option>75</option>
@@ -38,32 +37,31 @@
                       </label>
 
                       <label><b>Music:</b>
-                        <select>
-                              <option>Alternative Music</option>
-                              <option>Blues</option>
-                              <option>Classical Music</option>
-                              <option>Jazz</option>
+                        <select name="musicType">
+                        	<option>None</option>
+                             <?php
+                             	include_once 'script/music.php';
+                             ?>
                           </select>
                       </label>
 
                       <label><b>Menu types:</b>
-                        <select>
-                              <option>Traditional</option>
-                              <option>Italian</option>
-                              <option>German</option>
-                              <option>Grill</option>
-                              <option>Vegetarian</option>
-                              <option>Vegan</option>
+                        <select name="meniuType">
+                        	<option>None</option>
+                               <?php
+                             	include_once 'script/meniu.php';
+                             ?>
                           </select>
                       </label>
 
                       <label><b>Description:</b>
                         <div>
-                          <textarea type="text" placeholder="Describe event" autofocus required></textarea>
+                          <textarea type="text" placeholder="Describe event" name="description" autofocus required></textarea>
                         </div>
                       </label>
-      
-                    <button type="submit">Create event</button>
+                     <?php
+                    	echo '<button type="submit" name="submit" value="'.$_SESSION["user_identity"].'">Create event</button>';
+                    ?>
             </form>
         </div>
 </section>
