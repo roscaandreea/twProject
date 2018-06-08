@@ -30,7 +30,7 @@
 
                       <label><b>Location:</b>
                         <div>
-                        <?php echo '<input type="text"  name="location" value="'.$eveLocation.'">' ?>
+                          <?php echo '<input type="text"  name="location" value="'.$eveLocation.'">' ?>
                         </div>
                       </label>
 
@@ -68,7 +68,7 @@
 
                       <label><b>Description:</b>
                         <div>
-                          <?php echo '<textarea type="text" name="description" value='.$eveDescription.'></textarea>' ?>
+                          <?php echo '<input type="text" name="description" value="'.$eveDescription.'">' ?>
                         </div>
                       </label>
                      <?php
