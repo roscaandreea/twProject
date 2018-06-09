@@ -5,16 +5,14 @@
 
 <section id="firstSectionInvitation">
     <div id="formDiv">
-        <form>
+       <form class="feedback" method="POST" action="script/feedbackEditor.php">
                 <h1>Feedback Form Creator</h1>
-
-                <button> <a href="Feedback.php">finalizeFeedBackForm </a></button>
                
                 
 
                 <label><b>Question</b>
                     <div>
-                      <textarea type="text" placeholder="Enter Question." autofocus required></textarea>
+                      <textarea type="text" name="question" placeholder="Enter Question." autofocus required></textarea>
                     </div>
                   </label>
 
@@ -28,7 +26,29 @@
                 </select>
             </label>
                     
-                <button type="Add Question">Add Question</button>
+                <button type="Add Question" value="submit">Add Question</button>
+
+
+
+
+           <?php
+
+            if(!isset($_GET['addqu'])){
+                exit();
+            }else{
+                $submitCheck=$_GET['addqu'];
+
+                if($submitCheck == "empty"){
+                    echo "You did not fill all the fields!";
+                }else if($submitCheck=="errorInvalidChar"){
+                    echo "You have used invalid characters!";
+                    exit();
+                }else if($submitCheck=="succes"){
+                    echo "Your form was successfully submitted!";
+                }
+            }
+            
+            ?>
 
                 
         
