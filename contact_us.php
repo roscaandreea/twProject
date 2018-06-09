@@ -2,6 +2,11 @@
     include_once 'Header.php';
 ?>
 
+
+
+<form class="contactus" method="POST" action="script/contactUs.php">
+
+
 <section id="firstSectionInvitation">
     <div id="formDiv">
         <form>
@@ -39,7 +44,29 @@
       <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
   
       <input type="submit" value="Submit">
-  
+
+
+
+
+            <?php
+
+            if(!isset($_GET['submitCheck'])){
+                exit();
+            }else{
+                $submitCheck=$_GET['submitCheck'];
+
+                if($submitCheck == "empty"){
+                    echo "You did not fill all the fields!";
+                }else if($submitCheck=="errorInvalidChar"){
+                    echo "You have used invalid characters!";
+                    exit();
+                }else if($submitCheck=="succes"){
+                    echo "Your form was successfully submitted!";
+                }
+            }
+            
+            ?>
+    </form>
     </form>
 
     <h2 id="likeUsOnFaceBook">Have you found and liked us on Facebook yet? What are you waiting for? <a href="https://ro-ro.facebook.com/" target="_blank">We are right here!</a></h2>
