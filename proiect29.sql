@@ -296,6 +296,9 @@ ALTER TABLE `musicType`
 ALTER TABLE `user_accounts`
   MODIFY `user_id` int(7) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
+ALTER TABLE `contactUs`
+  MODIFY `contactUs_id` int(7) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
+
 --
 -- Constraints for dumped tables
 --
