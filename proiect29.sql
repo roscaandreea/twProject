@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Jun 09, 2018 at 11:30 AM
+-- Generation Time: Jun 09, 2018 at 01:43 PM
 -- Server version: 10.1.32-MariaDB
 -- PHP Version: 7.1.17
 
@@ -82,10 +82,6 @@ INSERT INTO `events` (`events_id`, `user_id`, `eventName`, `theme`, `location`, 
 -- Table structure for table `feedbackForm`
 --
 
-CREATE TABLE `feedbackForm` (
-  `feedbackForm_id` int(7) NOT NULL,
-  `events_id` int(7) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -95,7 +91,7 @@ CREATE TABLE `feedbackForm` (
 
 CREATE TABLE `formQuestions` (
   `formQuestions_id` int(7) NOT NULL,
-  `feedbackForm_id` int(7) NOT NULL,
+  `events_id` int(7) NOT NULL,
   `question` varchar(45) NOT NULL,
   `questionType_id` int(7) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -212,16 +208,12 @@ ALTER TABLE `events`
 --
 -- Indexes for table `feedbackForm`
 --
-ALTER TABLE `feedbackForm`
-  ADD PRIMARY KEY (`feedbackForm_id`),
-  ADD KEY `events_id` (`events_id`);
-
 --
 -- Indexes for table `formQuestions`
 --
 ALTER TABLE `formQuestions`
   ADD PRIMARY KEY (`formQuestions_id`),
-  ADD KEY `feedbackForm_id` (`feedbackForm_id`),
+  ADD KEY `events_id` (`events_id`),
   ADD KEY `questionType_id` (`questionType_id`);
 
 --
@@ -264,7 +256,7 @@ ALTER TABLE `user_accounts`
 -- AUTO_INCREMENT for table `contactUs`
 --
 ALTER TABLE `contactUs`
-  MODIFY `contactUs_id` int(7) NOT NULL AUTO_INCREMENT;
+  MODIFY `contactUs_id` int(7) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
 
 --
 -- AUTO_INCREMENT for table `events`
@@ -274,9 +266,7 @@ ALTER TABLE `events`
 
 --
 -- AUTO_INCREMENT for table `feedbackForm`
---
-ALTER TABLE `feedbackForm`
-  MODIFY `feedbackForm_id` int(7) NOT NULL AUTO_INCREMENT;
+
 
 --
 -- AUTO_INCREMENT for table `meniuType`
@@ -296,9 +286,6 @@ ALTER TABLE `musicType`
 ALTER TABLE `user_accounts`
   MODIFY `user_id` int(7) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
-ALTER TABLE `contactUs`
-  MODIFY `contactUs_id` int(7) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
-
 --
 -- Constraints for dumped tables
 --
@@ -306,14 +293,11 @@ ALTER TABLE `contactUs`
 --
 -- Constraints for table `feedbackForm`
 --
-ALTER TABLE `feedbackForm`
-  ADD CONSTRAINT `feedbackForm_ibfk_1` FOREIGN KEY (`events_id`) REFERENCES `events` (`events_id`);
-
 --
 -- Constraints for table `formQuestions`
 --
 ALTER TABLE `formQuestions`
-  ADD CONSTRAINT `formQuestions_ibfk_1` FOREIGN KEY (`feedbackForm_id`) REFERENCES `feedbackForm` (`feedbackForm_id`),
+  ADD CONSTRAINT `formQuestions_ibfk_1` FOREIGN KEY (`events_id`) REFERENCES `events` (`events_id`),
   ADD CONSTRAINT `formQuestions_ibfk_2` FOREIGN KEY (`questionType_id`) REFERENCES `questionTypes` (`questionType_id`);
 
 --
