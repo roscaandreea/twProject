@@ -21,7 +21,7 @@ if(empty($fname) ||empty($lname) || empty($subject)){
                     $stmt = mysqli_stmt_init($conn);
 
                     if(!mysqli_stmt_prepare($stmt,$sql)){
-                        echo"SQL signUp statement failed";
+                        echo"SQL contact us statement failed";
                     }else{
                         mysqli_stmt_bind_param($stmt,"ssss", $fname,$lname,$country,$subject);
                         mysqli_stmt_execute($stmt);
