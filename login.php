@@ -42,7 +42,7 @@
                     <span class="form-title">Sign in with</span>
                 </div>
 
-                <a href="#" class="form-google-button">Google</a>
+                <?php include_once 'script/googleLogIn.php' ?>
                 <a href="#" class="form-facebook-button">Facebook</a>
                 <a href="#" class="form-twitter-button">Twitter</a>
 
@@ -51,19 +51,19 @@
                 if(!isset($_GET['login'])){
                     exit();
                 }else{
-                $singUpCheck=$_GET['login'];
+                    $singUpCheck=$_GET['login'];
 
-                if($singUpCheck == "empty"){
-                    echo "You did not fill all the fields!";
-                }else if($singUpCheck=="error"){
-                    echo "Something went wrong!Please try again.";
-                    exit();
-                }else if($singUpCheck=="succes"){
-                    echo "You have been singed un!";
+                    if($singUpCheck == "empty"){
+                            echo "You did not fill all the fields!";
+                        }else if($singUpCheck=="error"){
+                            echo "Something went wrong!Please try again.";
+                            exit();
+                        }else if($singUpCheck=="succes"){
+                            echo "You have been singed un!";
+                        }
                 }
-}
 
-?>
+                ?>
 
             </div>
 

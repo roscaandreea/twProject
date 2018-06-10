@@ -36,7 +36,7 @@
 
                       <label><b>Number of people:</b>
                         <?php 
-                          echo '<select name="noOfPeople" value="'.$eveNoOfPeople.'">
+                          echo '<select name="noOfPeople" value='.$eveNoOfPeople.'>
                               <option>25</option>
                               <option>50</option>
                               <option>75</option>
@@ -72,7 +72,7 @@
                         </div>
                       </label>
                      <?php
-                    	echo '<button type="submit" name="submit" value="'.$_SESSION["user_identity"].'">Finalize edit</button>';
+                    	echo '<button type="submit" name="submit" value="'.$temp.'">Finalize edit</button>';
                     ?>
             </form>
         </div>
