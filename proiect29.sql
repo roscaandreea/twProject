@@ -33,6 +33,8 @@ CREATE TABLE `answerType` (
   `answerTypeCol` varchar(45) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+
+
 -- --------------------------------------------------------
 
 --
@@ -146,6 +148,16 @@ CREATE TABLE `questionTypes` (
   `questionType_id` int(7) NOT NULL,
   `questionType` varchar(45) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+
+
+
+
+INSERT INTO `questionTypes` (`questionType_id`, `questionType`) VALUES
+(1,  'Add a question that should be answered as a text.'),
+(2,  'Add a question that should be answered by choosing from multiple choices.'),
+(3, 'Add a question that should be answered with yes or no.'),
+(4,  'Add a question that should be answered on a scale from 1 to 5.');
 
 -- --------------------------------------------------------
 
@@ -265,7 +277,7 @@ ALTER TABLE `events`
   MODIFY `events_id` int(7) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
--- AUTO_INCREMENT for table `feedbackForm`
+
 
 
 --
@@ -294,6 +306,11 @@ ALTER TABLE `user_accounts`
 -- Constraints for table `feedbackForm`
 --
 --
+-- AUTO_INCREMENT for table `formQuestion`
+
+ALTER TABLE `formQuestions`
+  MODIFY `formQuestions_id` int(7) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+
 -- Constraints for table `formQuestions`
 --
 ALTER TABLE `formQuestions`
