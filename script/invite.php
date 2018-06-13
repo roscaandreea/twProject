@@ -4,7 +4,7 @@ if (isset($_POST['submit'])) {
 	$subject = $_POST['subject'];
 	$message = $_POST['message'];
 	$mailTo = $_POST['mail'];
-	$mailFrom = "marin.mihai1997@yahoo.com";
+	$mailFrom = "proiectul29@gmail.com";
 	$name = $_POST['name'];
 	$headers = "From: ".$mailFrom;
 	$txt = "You have been invited to a party by ".$name.".\n\n".$message;
