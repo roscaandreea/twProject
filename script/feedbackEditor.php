@@ -1,12 +1,19 @@
 <?php
 
-session_start();
 
-if(isset($_POST['submit'])){
+
+
 
     include_once 'dbHandler.php';    
-    $idevent=mysqli_real_escape_string($conn, $_POST['submit']);
     
+    $idevent=mysqli_real_escape_string($conn, $_POST['submit']); 
+
+    if(!isset($idevent))
+    {
+        $idevent=$_SESSION["currently_editing"];
+    }
+
+//$idevent=$_SESSION["currently_editing"];
 
 
     $question=mysqli_real_escape_string($conn, $_POST['question']);
@@ -16,7 +23,7 @@ if(isset($_POST['submit'])){
 
 
    if(empty($question)){
-        header("Location: ../feedBackFromEditor.php?addqu=empty");
+        header("Location: ../feedBackFromEditor.php?question_add=empty");
         exit();
     }
    else{
@@ -30,9 +37,9 @@ if(isset($_POST['submit'])){
                      mysqli_stmt_bind_param($stmt,"isi", $idevent,$question,$answertype);
                     
                      mysqli_stmt_execute($stmt);
-        header("Location: ../feedBackFromEditor.php?addqu=success") ;
+        header("Location: ../feedBackFromEditor.php?question_add=succes") ;
         exit();
     }
 }
-}
+
 ?>
