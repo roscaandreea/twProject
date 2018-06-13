@@ -1,8 +1,14 @@
 <?php
     include_once 'Header.php';
 ?>
+
     
         <form class="form-login" method="POST" action="script/logIn.php">
+
+            <input type="text" name="text" value="Please enter the verification code below"/>
+            <img src="captcha.php" alt=""/><br/>
+            <input type="text" name="check" required/>
+            <input type="submit" name="submit" value="Check"/>
 
             <div class="form-log-in-with-email">
 
