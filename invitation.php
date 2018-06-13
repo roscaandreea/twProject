@@ -1,15 +1,14 @@
 <?php
     include_once 'Header.php';
 ?>
-
 <section id="firstSectionInvitation">
     <div id="formDiv">
-        <form>
+        <form action="script/invite.php" method="POST">
                 <h1>Invitation</h1>
 
                 <label><b>To:</b>
                   <div>
-                    <input type="text" placeholder="Enter Name" name="name" autofocus required>
+                    <input name="mail" placeholder="name@domain.com" required="" type="email"> 
                   </div>
                 </label>
           
@@ -18,22 +17,20 @@
                       <input type="text" placeholder="Enter Name" name="name" autofocus required>
                     </div>
                   </label>
-
-                  
-                <label><b>Email Receiver</b> 
-                    <div > 
-                        <input class="usrimput" placeholder="name@domain.com" required="" type="email"> 
-                    </div>
-                </label>     
-                    
-          
-                  <label><b>Messege</b>
+  
+				<label><b>Subject</b>
                     <div>
-                      <textarea type="text" placeholder="Enter Messege" autofocus required></textarea>
+                      <input type="text" name="subject" placeholder="Enter Subject" autofocus required></textarea>
                     </div>
-                  </label>
+                </label>
+				  
+                <label><b>Message</b>
+                    <div>
+                      <textarea type="text" name="message" placeholder="Enter Message" autofocus required></textarea>
+                    </div>
+                </label>
 
-                  <button type="submit">Submit</button>
+                  <button type="submit" name="submit">Submit</button>
         
         </form>
     </div>
