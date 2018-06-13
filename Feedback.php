@@ -5,7 +5,7 @@
     include_once 'Header.php';
     include_once 'script/dbHandler.php';
     //$temp=$_POST['idevent'];
-    $events="SELECT formQuestions_id,question, questionType_id FROM formquestions WHERE events_id=13";
+    $events="SELECT formQuestions_id,question, questionType_id FROM formquestions WHERE events_id=17";
     $results=mysqli_query($conn,$events);
     $resultCheck=mysqli_num_rows($results);
     if($resultCheck>0){

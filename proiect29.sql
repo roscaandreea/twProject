@@ -298,6 +298,21 @@ ALTER TABLE `musicType`
 ALTER TABLE `user_accounts`
   MODIFY `user_id` int(7) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
+ALTER TABLE `formQuestions`
+  MODIFY `formQuestions_id` int(7) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+
+
+ALTER TABLE `questionTypes`
+  MODIFY `questionType_id` int(7) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+
+ALTER TABLE `receivedAnswers`
+  MODIFY `receivedAnswers_id` int(7) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+
+ALTER TABLE `answerType`
+  MODIFY `answerType_id` int(7) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+
+
+
 --
 -- Constraints for dumped tables
 --
