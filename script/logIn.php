@@ -2,12 +2,30 @@
 
 session_start();
 
+
+
+     $check=$_POST['check'];
+        //Verificam daca codul introdus de user este cel corect
+    if($check==$_SESSION['check']) {
+        echo "Cod introdus corect!";
+        $status=TRUE;
+    }
+    else echo "Cod INCORECT!";
+    if(isset($status)) {
+        //Continua cu restul scriptul
+    }
+
+
+
 if(isset($_POST['submit'])){
 
     include_once 'dbHandler.php';
 
     $email=mysqli_real_escape_string($conn, $_POST['email']);
     $passwd=mysqli_real_escape_string($conn, $_POST['password']);
+
+
+
 
     if(empty($email) ||empty($passwd)){
         header("Location: ../login.php?login=empty");
