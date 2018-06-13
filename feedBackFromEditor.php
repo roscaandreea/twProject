@@ -2,7 +2,11 @@
     include_once 'Header.php';
     include_once 'script/dbHandler.php';
     $temp=$_POST['idevent'];
+    if($temp!=NULL){
     $_SESSION["currently_editing"]=$temp;
+}else {
+    $temp= $_SESSION["currently_editing"];
+}
 ?>
 
 
