@@ -2,7 +2,7 @@
     include_once 'Header.php';
     include_once 'script/dbHandler.php';
     $temp=$_POST['idevent'];
-      
+    $_SESSION["currently_editing"]=$temp;
 ?>
 
 
@@ -34,9 +34,10 @@
                   </label>       
                
                 <?php   
-                echo '<button type="Add Question" name="submit" value="'.$temp.'">Add Question</button>';             
+                echo '<button type="Add Question" name="submit" value="'.$temp.'">Add Question</button>';  
                 ?>
-        
+
+
         </form>
         
     </div>
@@ -47,5 +48,5 @@
 
 <?php
     include_once 'Footer.php';
-   // print_r($temp);
+    print_r($temp);
 ?>
