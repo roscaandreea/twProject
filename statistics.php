@@ -14,6 +14,11 @@
   include_once 'script/generateStatistics.php';
   ?>
   </div>
+   <div id="chart-3">
+  <?php
+  include_once 'script/generateStatistics.php';
+  ?>
+  </div>
    <form method="get" action="script/gen_csvfile.php">
    <button type="submit" name="submit1"> Dowload as CSV</button>
    </form>
