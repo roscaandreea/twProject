@@ -1249,3 +1249,15 @@ input {
     margin: 8px auto;
     text-decoration: none;
 }
+
+   #chart-1{ 
+    padding: 10% 0;
+    margin-top:-50px;
+    margin-left:100px;
+  
+}
+#chart-2{
+    padding: 10% 0;
+    margin-top:10px;
+    margin-left:100px;
+}
