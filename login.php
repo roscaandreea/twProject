@@ -49,7 +49,7 @@
                 </div>
 
                 <?php include_once 'script/googleLogIn.php' ?>
-                <a href="#" class="form-facebook-button">Facebook</a>
+                <?php include_once 'script/facebookLogIn.php' ?>
                 <a href="#" class="form-twitter-button">Twitter</a>
 
                 <?php
