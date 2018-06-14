@@ -1,4 +1,4 @@
-<?php require ("C:\\xampp\htdocs\\twProject\\vendor\\autoload.php");
+<?php require 'vendor\\autoload.php';
 
 //Step 1: Enter you google account credentials
 $g_client = new Google_Client();
