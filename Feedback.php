@@ -2,7 +2,7 @@
     <div id="formDiv">
 
 <?php
-    $currentEv=17;
+    $currentEv=16;
     include_once 'Header.php';
     include_once 'script/dbHandler.php';
     //$temp=$_POST['idevent'];

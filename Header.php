@@ -23,7 +23,7 @@
                 echo '<li><form action="script/logOut.php" method="POST">
                         <button type="submit" name="submit">Log out</button></form></li>
                         <li > <a href="manageEvents.php"> EventManager </a> </li>
-                        <li > <a href="contac[t_us.php"> Contact</a>  </li>
+                        <li > <a href="contact_us.php"> Contact</a>  </li>
                         <li > <a href="about.php"> About </a> </li>
                         <li > <a href="statistics.php">Statistics</a></li>
                         <li > <a href="index.php">Home</a></li>';
