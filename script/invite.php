@@ -6,10 +6,10 @@ use PHPMailer\PHPMailer\Exception;
 
 
 if (isset($_POST['submit'])) {
-	$subject = $_POST['subject'];
-	$message = $_POST['message'];
-	$mailTo = $_POST['mail'];
-	$name = $_POST['name'];
+	$subject =mysqli_real_escape_string($conn, $_POST['subject']);
+	$message = mysqli_real_escape_string($conn,$_POST['message']);
+	$mailTo = mysqli_real_escape_string($conn,$_POST['mail']);
+	$name = mysqli_real_escape_string($conn,$_POST['name']);
 	
 	$txt = "You have been invited to a party by ".$name.".\n\n".$message;
 	
