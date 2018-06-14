@@ -1,17 +1,4 @@
-<?php
-
-require ("C:\\xampp\htdocs\\twProject\\vendor\\autoload.php");
-
-//session_start();
-
-
-if(isset($_GET['state'])) {
-
-    $_SESSION['FBRLH_state'] = $_GET['state'];
-
-}
-
-
+<?php require_once 'C:\\xampp\\htdocs\\twProject\\vendor\\autoload.php';
 
 /*Step 1: Enter Credentials*/
 
