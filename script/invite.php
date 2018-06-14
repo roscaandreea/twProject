@@ -6,6 +6,7 @@ use PHPMailer\PHPMailer\Exception;
 
 
 if (isset($_POST['submit'])) {
+    include_once 'dbHandler.php';
 	$subject =mysqli_real_escape_string($conn, $_POST['subject']);
 	$message = mysqli_real_escape_string($conn,$_POST['message']);
 	$mailTo = mysqli_real_escape_string($conn,$_POST['mail']);
