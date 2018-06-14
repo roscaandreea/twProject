@@ -15,7 +15,7 @@
                     <div class="form-row">
                         <label>
                             <span>Name</span>
-                            <input type="text" name="name">
+                            <input type="text" name="name" value="name">
                         </label>
                     </div>
 
@@ -56,8 +56,8 @@
                     <span class="form-title">Sign in with</span>
                 </div>
 
-                <a href="#" class="form-google-button">Google</a>
-                <a href="#" class="form-facebook-button">Facebook</a>
+                <?php include_once 'script/googleLogIn.php' ?>
+                <?php include_once 'script/facebookLogIn.php' ?>
                 <a href="#" class="form-twitter-button">Twitter</a>
             
             
