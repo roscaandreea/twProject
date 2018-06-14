@@ -3,10 +3,10 @@
 	include('vendor/fusioncharts.php');
     $sql="SELECT answer ,count(answer) as 'number' FROM receivedanswers where answer='yes' union  SELECT answer,count(answer) as 'number' FROM receivedanswers where answer='no'";
     $sql2="SELECT answer,count(answer) as 'num' FROM receivedanswers WHERE answer='1' union SELECT answer,count(answer) as 'num' FROM receivedanswers WHERE answer='3'union SELECT answer,count(answer) as 'num' FROM receivedanswers WHERE answer='4' union SELECT answer,count(answer) as 'num' FROM receivedanswers WHERE answer='5'";
-    $sql3="SELECT meniuType,count(meniuType) as 'num' FROM meniutype where meniuType='suedez' union SELECT meniuType,count(meniuType) as 'num' FROM meniutype where meniuType='vegetarian'";
+    $sql3="SELECT meniuType,count(meniuType) as 'num' FROM meniutype where meniuType='suedeza' union SELECT meniuType,count(meniuType) as 'num' FROM meniutype where meniuType='vegetarian'  union SELECT meniuType,count(meniuType) as 'num' FROM meniutype where meniuType='aperitiv' union SELECT meniuType,count(meniuType) as 'num' FROM meniutype where meniuType='felul 2'";
     $result=mysqli_query($conn,$sql);
     $result2=mysqli_query($conn,$sql2);
-    $result3=mysqli_query($conn,$sql2);
+    $result3=mysqli_query($conn,$sql3);
 
 
     if ($result) {
@@ -72,7 +72,7 @@
 
        $lineChart = new FusionCharts("column2D", "myFirstChart" , 900, 300, "chart-1", "json", $jsonEncodedData);
        $Chart2 = new FusionCharts("pie2D", "Chart" ,900, 300, "chart-2", "json", $jsonEncodedData2);
-       $Chart3 = new FusionCharts("area2D", "Chart3" ,900, 300, "chart-3", "json", $jsonEncodedData2);
+       $Chart3 = new FusionCharts("area2D", "Chart3" ,900, 300, "chart-3", "json", $jsonEncodedData3);
 
        $lineChart->render();
         $Chart2->render();
